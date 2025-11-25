@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Form</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+       function App()
+       {
+        const [showPassword,setShowPassword]= React.useState(false);
+        function passwordUpdate(){
+            if(showPassword)
+            {
+                setShowPassword(false);
+            }
+            else
+            {
+                setShowPassword(true);
+            }
+        }
+
+
+        return (
+            <>
+                <p className="head-content">Hello , Welcome to my website</p>
+                <div>
+                    <input placeholder="Email" className="input-content"/>
+                </div>
+                
+                <div>
+                    <input placeholder="Password" className="input-content" type={showPassword?"text":"password"}/>
+                    <button onClick={passwordUpdate} className="show-button">{showPassword?"Hide":"Show"}</button>
+                </div>
+                
+                <div>
+                    <button className="button-content">Login</button>
+                    <button className="button-content">Sign up</button>
+                </div>
+                            
+            </>
+        );
+       } 
+
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>

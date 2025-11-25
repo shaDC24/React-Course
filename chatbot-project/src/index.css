@@ -1,0 +1,13 @@
+        body {
+            font-family: Arial;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            background-color: rgb(41, 40, 40);
+
+        }
+
+        .chat-message-time {
+        font-size: 14px;
+        color: rgb(125, 125, 125);
+        margin-top: 5px;
+        }
