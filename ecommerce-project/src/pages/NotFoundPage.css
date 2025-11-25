@@ -1,0 +1,14 @@
+._404 {
+    font-size: 100px;
+    font-weight: bold;
+    color: #2c0603;
+    margin-top: 100px;
+    text-align: center;
+}
+.not-found-page {
+    margin-top: 1px;
+    text-align: center;
+    padding: 50px;
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+}

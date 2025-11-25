@@ -1,16 +1,19 @@
 import './CheckoutPage.css'
 import './CheckoutHeader.css'
-
+import CheckoutLockIcon from '../../assets/images/icons/checkout-lock-icon.png';
+import Logo from '../../assets/images/logo.png';
+import MobileLogo from '../../assets/images/mobile-logo.png';
 function CheckoutPage() {
   return (
-    <>
+    <> 
         <title>Checkout Page</title>
+        <link rel="icon" type="image/svg+xml" href="../public/cart-favicon.png" />
         <div className="checkout-header">
         <div className="header-content">
             <div className="checkout-header-left-section">
             <a href="/">
-                <img className="logo" src="images/logo.png" />
-                <img className="mobile-logo" src="images/mobile-logo.png" />
+                <img className="logo" src={Logo} />
+                <img className="mobile-logo" src={MobileLogo} />
             </a>
             </div>
 
@@ -20,7 +23,7 @@ function CheckoutPage() {
             </div>
 
             <div className="checkout-header-right-section">
-            <img src="images/icons/checkout-lock-icon.png" />
+            <img src={CheckoutLockIcon} />
             </div>
         </div>
         </div>

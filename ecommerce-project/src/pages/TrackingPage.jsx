@@ -2,6 +2,7 @@ import './TrackingPage.css'
 function TrackingPage() {
     return (
         <div>
+            <link rel="icon" type="image/svg+xml" href="./public/tracking-favicon.png" />
             <title>Tracking Page</title>
             <div class="header">
             <div class="left-section">
