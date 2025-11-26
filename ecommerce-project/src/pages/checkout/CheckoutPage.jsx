@@ -7,7 +7,8 @@ import { OrderSummary } from './OrderSummary';
 import { PaymentSummary } from './PaymentSummary';
 import { CheckoutHeader } from './CheckoutHeader';
 
-function CheckoutPage({ cart }) {
+
+function CheckoutPage({ cart,loadCart }) {
   
   const [deliveryOption, setDeliveryOption] = useState([]);
   const [paymentSummary, setPaymentSummary] = useState(null);
@@ -16,11 +17,12 @@ function CheckoutPage({ cart }) {
     const fetchCheckoutData=async () =>{
       let response = await axios.get('/api/delivery-options?expand=estimatedDeliveryTime');
       setDeliveryOption(response.data);
+      
       response = await axios.get('/api/payment-summary');
       setPaymentSummary(response.data);
     };
     fetchCheckoutData();
-  },[]);
+  },[cart]);
 
 
 
@@ -34,7 +36,7 @@ function CheckoutPage({ cart }) {
         <div className="page-title">Review your order</div>
 
         <div className="checkout-grid">
-            <OrderSummary cart={cart} deliveryOption={deliveryOption} />
+            <OrderSummary cart={cart} deliveryOption={deliveryOption} loadCart={loadCart} />
             <PaymentSummary paymentSummary={paymentSummary} />
 
         </div>
