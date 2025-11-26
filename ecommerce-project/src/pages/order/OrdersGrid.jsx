@@ -3,7 +3,7 @@ import { OrderDetails } from './OrderDetails.jsx';
 
 
 
-export function OrdersGrid({orders})
+export function OrdersGrid({orders,loadCart})
 {
     return (
             <div className="orders-grid">
@@ -13,7 +13,7 @@ export function OrdersGrid({orders})
 
                         <OrderHeader order={order} />
 
-                        <OrderDetails order={order} />
+                        <OrderDetails order={order} loadCart={loadCart} />
                         </div>                        
                     );
                 })}
