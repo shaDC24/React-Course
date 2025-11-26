@@ -10,7 +10,7 @@ import { CheckoutHeader } from './CheckoutHeader';
 
 function CheckoutPage({ cart,loadCart }) {
   
-  const [deliveryOption, setDeliveryOption] = useState([]);
+  const [deliveryOptions, setDeliveryOption] = useState([]);
   const [paymentSummary, setPaymentSummary] = useState(null);
 
   useEffect(()=>{
@@ -42,7 +42,7 @@ function CheckoutPage({ cart,loadCart }) {
         <div className="page-title">Review your order</div>
 
         <div className="checkout-grid">
-            <OrderSummary cart={cart} deliveryOption={deliveryOption} loadCart={loadCart} />
+            <OrderSummary cart={cart} deliveryOptions={deliveryOptions} loadCart={loadCart} />
             <PaymentSummary paymentSummary={paymentSummary} loadCart={loadCart} />
 
         </div>
